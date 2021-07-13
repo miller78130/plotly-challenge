@@ -32,7 +32,7 @@ function init() {
         });
         // console.log(string_Otu_ids);
 
-        // bar graph
+        // bar chart
         var data = [{
         type: "bar",
         orientation: "h",
@@ -88,7 +88,7 @@ function init() {
                         dtick: 1,
                         tickwidth: 2
                     },
-                    bar: { color: "Lime"},
+                    bar: { color: "#00FF00"},
                     borderwidth: 2,
                     bordercolor: "gray",
                     steps: [
@@ -121,6 +121,7 @@ function optionChanged() {
     // Assign value to variable (value is id's index inside samples list)
     var selection = d3.select("#selDataset").property("value");
     console.log(selection);
+    // Robert Miller
 
     // Read in data file again
     d3.json("samples.json").then(function(data) {
@@ -130,7 +131,7 @@ function optionChanged() {
         var otu_ids = sample.otu_ids;
         var otu_labels = sample.otu_labels;
         var metadata = data.metadata[`${selection}`];
-        var wfreq = metadata.wfreq
+        var wash_Freq = metadata.wfreq
         console.log(sample);
 
         // Rebuild Bar chart data
@@ -166,7 +167,7 @@ function optionChanged() {
             d3.select("#sample-metadata").append("p").attr("style", "font-weight: bold").text(`${key}: ${value}`));
 
         // Restyle Gauge Chart
-        Plotly.restyle("gauge", "value", [wfreq]);
+        Plotly.restyle("gauge", "value", [wash_Freq]);
 
     });  
 };
