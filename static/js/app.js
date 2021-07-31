@@ -76,11 +76,11 @@ function init() {
          // ** BONUS **   
             var data = [
                 {
-                  type: "indicator",
-                  mode: "gauge",
-                  value: wash_Freq,
-                  title: {text: "Scrubs per Week", font: {size: 24}},
-                  gauge: {
+                type: "indicator",
+                mode: "gauge",
+                value: wash_Freq,
+                title: {text: "Scrubs per Week", font: {size: 24}},
+                gauge: {
                     axis: { 
                         range: [0, 9], 
                         tickmode: "linear",
@@ -92,25 +92,24 @@ function init() {
                     borderwidth: 2,
                     bordercolor: "gray",
                     steps: [
-                      {range: [0, 1], color: "#E8F6F3"},
-                      {range: [1, 2], color: "#D0ECE7"},
-                      {range: [2, 3], color: "#A2D9CE"},
-                      {range: [3, 4], color: "#73C6B6"},
-                      {range: [4, 5], color: "#45B39D"},
-                      {range: [5, 6], color: "#16A085"},
-                      {range: [6, 7], color: "#138D75"},
-                      {range: [7, 8], color: "#117A65"},
-                      {range: [8, 9], color: "#0E6655"}
+                    {range: [0, 1], color: "#E8F6F3"},
+                    {range: [1, 2], color: "#D0ECE7"},
+                    {range: [2, 3], color: "#A2D9CE"},
+                    {range: [3, 4], color: "#73C6B6"},
+                    {range: [4, 5], color: "#45B39D"},
+                    {range: [5, 6], color: "#16A085"},
+                    {range: [6, 7], color: "#138D75"},
+                    {range: [7, 8], color: "#117A65"},
+                    {range: [8, 9], color: "#0E6655"}
                     ]
-                  }
                 }
-              ];
+                }
+            ];
             
             var layout = {
                 title: "Belly Button Washing Frequency", font: {size: 18}
-            }
-              
-              Plotly.newPlot("gauge", data, layout);
+            }              
+            Plotly.newPlot("gauge", data, layout);
             });
         
 };
